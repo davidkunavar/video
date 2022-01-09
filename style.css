@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+
+}
+h2{
+    color: white;
+    font-size: 2.5em;
+    z-index: 1;
+    transition: 0.4s ease-in-out;
+}
+h2:hover{
+    border-radius: 6px 6px;
+    background-color: rgba(200, 200, 200, 0.2);
+    padding: 10px 16px;
+}
+header{
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+}
+.video-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+header::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.swithc__btn{
+    position: relative;
+    background-color: white;
+    font-size: 1.3em;
+    padding: 8px 0;
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    border: none;
+    border-radius: 6px 6px;
+    overflow: hidden;
+
+}
+.switch{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: rgba(30, 30, 30, 0.8);
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    transition: 0.4s ease-in-out;
+    border-radius: 6px 6px;
+    overflow: hidden;
+}
+.slide .switch{
+    left: 50%;
+}
+.play{
+    color: white;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+.stop{
+    transition: 0.5s ease-in-out;
+    color: white;
+
+
+}
+.slide .play{
+    font-size: 0.9em;
+
+}
+.slide .stop{
+    font-size: 1em;
+    color: white;
+    z-index: 2;
+}
